@@ -3,7 +3,18 @@
 from teacher import Teacher
 from user import User
 
-my_teacher = Teacher("My", "Teacher")
+knowledge = [
+    "str is a data type in Python",
+    "programming is hard, but it's worth it",
+    "JavaScript async web request",
+    "Python function call definition",
+    "object-oriented teacher instance",
+    "programming computers hacking learning terminal",
+    "pipenv install pipenv shell",
+    "pytest -x flag to fail fast"
+]
+
+my_teacher = Teacher("My", "Teacher", knowledge)
 
 class TestTeacher:
     '''Class "Teacher" in teacher.py'''
@@ -22,5 +33,5 @@ class TestTeacher:
 
     def test_can_teach(self):
         '''teaches from list of knowledge.'''
-        my_teacher = Teacher("My", "Teacher")
         assert(my_teacher.teach() in my_teacher.knowledge)
+
